@@ -1,19 +1,26 @@
 import { ChapterStatus, STATUS_LABEL } from "@/lib/book";
 
+// 功能性狀態標示：近直角、髮絲框、靜態訊號（Rams：unobtrusive / 無謂動態歸零）
 const STYLE: Record<ChapterStatus, string> = {
-  planned: "border-black/15 text-[var(--muted)]",
-  drafting: "border-[var(--accent)]/40 text-[var(--accent-ink)] bg-[var(--accent)]/10",
-  published: "border-emerald-600/30 text-emerald-700 bg-emerald-600/10",
+  planned: "border-[var(--line-strong)] text-[var(--metal)]",
+  drafting: "border-[var(--accent)]/45 text-[var(--accent-ink)]",
+  published: "border-[var(--fg)]/30 text-[var(--fg)]",
+};
+
+const DOT: Record<ChapterStatus, string> = {
+  planned: "bg-[var(--metal)]",
+  drafting: "bg-[var(--accent)]",
+  published: "bg-[var(--fg)]",
 };
 
 export default function StatusBadge({ status }: { status: ChapterStatus }) {
   return (
     <span
-      className={`inline-flex items-center rounded-full border px-2 py-0.5 text-xs font-medium ${STYLE[status]}`}
+      className={`inline-flex items-center gap-1.5 rounded-[var(--radius)] border px-2 py-0.5 text-[0.6875rem] font-semibold uppercase tracking-wider ${STYLE[status]}`}
     >
-      {status === "drafting" && (
-        <span className="mr-1 inline-block h-1.5 w-1.5 animate-pulse rounded-full bg-[var(--accent)]" />
-      )}
+      <span
+        className={`inline-block h-1.5 w-1.5 rounded-[1px] ${DOT[status]}`}
+      />
       {STATUS_LABEL[status]}
     </span>
   );

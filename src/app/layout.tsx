@@ -23,28 +23,43 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="zh-Hant">
-      <body className="flex min-h-screen flex-col bg-[var(--bg)] text-[var(--fg)] antialiased">
-        <header className="border-b border-black/10">
-          <div className="mx-auto flex max-w-3xl items-center justify-between px-5 py-4">
-            <Link href="/" className="font-semibold tracking-tight">
-              The Super One
-            </Link>
-            <nav className="flex items-center gap-5 text-sm text-[var(--muted)]">
-              <Link href="/book" className="hover:text-[var(--fg)]">目錄</Link>
-              <Link href="/about" className="hover:text-[var(--fg)]">關於</Link>
-            </nav>
-          </div>
-        </header>
-        <main className="mx-auto w-full max-w-3xl flex-1 px-5">{children}</main>
-        <footer className="mt-24 border-t border-black/10">
-          <div className="mx-auto max-w-3xl px-5 py-10 text-sm text-[var(--muted)]">
-            <p className="flex items-center gap-2">
-              <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-[var(--accent)]" />
-              公開寫作中 · Building in Public
-            </p>
-            <p className="mt-2">《The Super One — AI 時代的超級個體》 · 作者 AI-MAN</p>
-          </div>
-        </footer>
+      <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)] antialiased">
+        {/* 白色「紙頁」浮在中性灰「層架」上 — Vitsœ 語彙 */}
+        <div className="mx-auto flex min-h-screen max-w-3xl flex-col border-x border-[var(--line)] bg-[var(--surface)]">
+          <header className="border-b border-[var(--line)]">
+            <div className="flex items-center justify-between px-6 py-5">
+              <Link
+                href="/"
+                className="text-[var(--fg-strong)] font-semibold tracking-tight"
+              >
+                The Super One
+              </Link>
+              <nav className="flex items-center gap-6 text-sm text-[var(--muted)]">
+                <Link href="/book" className="hover:text-[var(--fg-strong)]">
+                  目錄
+                </Link>
+                <Link href="/about" className="hover:text-[var(--fg-strong)]">
+                  關於
+                </Link>
+              </nav>
+            </div>
+          </header>
+
+          <main className="flex-1 px-6">{children}</main>
+
+          <footer className="border-t border-[var(--line)]">
+            <div className="px-6 py-8 text-sm text-[var(--muted)]">
+              <p className="flex items-center gap-2">
+                <span className="live-mark" />
+                <span className="eyebrow">Building in Public</span>
+              </p>
+              <p className="mt-3 text-[var(--fg)]">
+                《The Super One — AI 時代的超級個體》
+              </p>
+              <p className="mt-0.5">作者 AI-MAN · 公開寫作中</p>
+            </div>
+          </footer>
+        </div>
       </body>
     </html>
   );
