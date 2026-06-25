@@ -23,43 +23,43 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="zh-Hant">
-      <body className="min-h-screen bg-[var(--bg)] text-[var(--fg)] antialiased">
-        {/* 白色「紙頁」浮在中性灰「層架」上 — Vitsœ 語彙 */}
-        <div className="mx-auto flex min-h-screen max-w-3xl flex-col border-x border-[var(--line)] bg-[var(--surface)]">
-          <header className="border-b border-[var(--line)]">
-            <div className="flex items-center justify-between px-6 py-5">
-              <Link
-                href="/"
-                className="text-[var(--fg-strong)] font-semibold tracking-tight"
-              >
-                The Super One
+      <body className="flex min-h-screen flex-col bg-[var(--surface)] text-[var(--fg)] antialiased">
+        {/* 全螢幕版型：白底滿版，chrome 滿寬髮絲線，內容置中於寬容器 */}
+        <header className="border-b border-[var(--line)]">
+          <div className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-5 sm:px-10">
+            <Link
+              href="/"
+              className="text-[var(--fg-strong)] font-semibold tracking-tight"
+            >
+              The Super One
+            </Link>
+            <nav className="flex items-center gap-6 text-sm text-[var(--muted)]">
+              <Link href="/book" className="hover:text-[var(--fg-strong)]">
+                目錄
               </Link>
-              <nav className="flex items-center gap-6 text-sm text-[var(--muted)]">
-                <Link href="/book" className="hover:text-[var(--fg-strong)]">
-                  目錄
-                </Link>
-                <Link href="/about" className="hover:text-[var(--fg-strong)]">
-                  關於
-                </Link>
-              </nav>
-            </div>
-          </header>
+              <Link href="/about" className="hover:text-[var(--fg-strong)]">
+                關於
+              </Link>
+            </nav>
+          </div>
+        </header>
 
-          <main className="flex-1 px-6">{children}</main>
+        <main className="mx-auto w-full max-w-6xl flex-1 px-6 sm:px-10">
+          {children}
+        </main>
 
-          <footer className="border-t border-[var(--line)]">
-            <div className="px-6 py-8 text-sm text-[var(--muted)]">
-              <p className="flex items-center gap-2">
-                <span className="live-mark" />
-                <span className="eyebrow">Building in Public</span>
-              </p>
-              <p className="mt-3 text-[var(--fg)]">
-                《The Super One — AI 時代的超級個體》
-              </p>
-              <p className="mt-0.5">作者 AI-MAN · 公開寫作中</p>
-            </div>
-          </footer>
-        </div>
+        <footer className="border-t border-[var(--line)]">
+          <div className="mx-auto w-full max-w-6xl px-6 py-8 text-sm text-[var(--muted)] sm:px-10">
+            <p className="flex items-center gap-2">
+              <span className="live-mark" />
+              <span className="eyebrow">Building in Public</span>
+            </p>
+            <p className="mt-3 text-[var(--fg)]">
+              《The Super One — AI 時代的超級個體》
+            </p>
+            <p className="mt-0.5">作者 AI-MAN · 公開寫作中</p>
+          </div>
+        </footer>
       </body>
     </html>
   );
