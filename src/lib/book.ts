@@ -44,7 +44,7 @@ export const STAGES: StageMeta[] = [
   { n: 3, theme: "主題三", title: "The Super Money（超級生意 · 形態）", blurb: "三位一體：品牌 × 媒體 × 電商" },
   { n: 4, theme: "主題三", title: "The Super Money（超級生意 · 本質）· The Super One", blurb: "為什麼超級 + 終局" },
   { n: 5, theme: "EXTRAS · 附錄", title: "深入手冊與實戰案例", blurb: "Boss Engineering 操作手冊、全書案例與 Claude Code 提示詞" },
-  { n: 6, theme: "🎁 BONUS · 讀者贈品", title: "創作你自己的電子書", blurb: "本書獨創的 WRITING IN PUBLIC 寫作法 + 用 Claude Code 創作電子書的一流提示詞" },
+  { n: 6, theme: "🎁 BONUS · 讀者贈品", title: "買這本書，專屬贈品", blurb: "WRITING IN PUBLIC 寫作法、Claude Code 一流提示詞，以及免費 AI 實戰課程——贈品持續增加中" },
 ];
 
 type Canon = { slug: string; stage: number; chapter: number; title: string; summary: string };
