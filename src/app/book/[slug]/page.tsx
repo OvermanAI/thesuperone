@@ -5,6 +5,7 @@ import { MDXRemote } from "next-mdx-remote/rsc";
 import remarkGfm from "remark-gfm";
 import { CANON, getChapter, chapterNeighbors, STATUS_LABEL } from "@/lib/book";
 import StatusBadge from "@/components/StatusBadge";
+import Giscus from "@/components/Giscus";
 
 export function generateStaticParams() {
   return CANON.map((c) => ({ slug: c.slug }));
@@ -121,6 +122,16 @@ export default async function ChapterPage({
                 </li>
               ))}
           </ul>
+        </section>
+      )}
+
+      {!planned && (
+        <section className="mt-14 border-t border-[var(--line)] pt-6">
+          <p className="eyebrow">留言 · Comments</p>
+          <p className="mt-2 mb-5 text-sm text-[var(--muted)]">
+            這是公開草稿——有想法、有指正，直接留言，一起把它變得更好。
+          </p>
+          <Giscus />
         </section>
       )}
 

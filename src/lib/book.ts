@@ -128,3 +128,23 @@ export const STATUS_LABEL: Record<ChapterStatus, string> = {
   drafting: "草稿中",
   published: "已發布",
 };
+
+// ── 建造日誌：彙整全書每章的修訂紀錄，反時序 ──
+export type BuildLogEntry = {
+  date: string;
+  slug: string;
+  title: string;
+  note: string;
+};
+
+export function getBuildLog(): BuildLogEntry[] {
+  const entries: BuildLogEntry[] = [];
+  for (const c of getChapters()) {
+    if (!c.revisions) continue;
+    for (const r of c.revisions) {
+      entries.push({ date: r.date, slug: c.slug, title: c.title, note: r.note });
+    }
+  }
+  entries.sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : 0));
+  return entries;
+}
