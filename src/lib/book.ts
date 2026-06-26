@@ -29,7 +29,7 @@ export const STAGES: StageMeta[] = [
   { n: 2, theme: "主題二", title: "My AI Factory（我的 AI 工廠）", blurb: "The Super One 的超級槓桿" },
   { n: 3, theme: "主題三", title: "The Super Money（超級生意 · 形態）", blurb: "三位一體：品牌 × 媒體 × 電商" },
   { n: 4, theme: "主題三", title: "The Super Money（超級生意 · 本質）· The Super One", blurb: "為什麼超級 + 終局" },
-  { n: 5, theme: "EXTRAS · 附錄", title: "實戰案例與提示詞", blurb: "每章一份最佳實務案例 + 可直接貼的 Claude Code 提示詞" },
+  { n: 5, theme: "EXTRAS · 附錄", title: "深入手冊與實戰案例", blurb: "Boss Engineering 操作手冊、全書案例與 Claude Code 提示詞" },
 ];
 
 type Canon = { slug: string; stage: number; chapter: number; title: string; summary: string };
@@ -48,6 +48,7 @@ export const CANON: Canon[] = [
   { slug: "ch10", stage: 4, chapter: 10, title: "超級商業模式：三位一體飛輪、多重收入指數增長", summary: "四資產堆疊 × 三線交叉導流 → 上億美元收入結構。" },
   { slug: "ch11", stage: 4, chapter: 11, title: "超級競爭優勢：不可複製的護城河", summary: "一人勝百人；會自己加速、對手抄不走的護城河。" },
   { slug: "ch12", stage: 4, chapter: 12, title: "成為文化領袖：AI 時代的新世代領導者", summary: "不只是高收入，是一種新的活法。" },
+  { slug: "boss-engineering", stage: 5, chapter: 0, title: "附錄：Boss Engineering 實戰手冊", summary: "別追會過時的 Prompt/Context/Harness/Loop Engineering——用最強 AI 去執行它們；你只專精唯一會增值的技能：當一流 AI 老闆。" },
   { slug: "appendix-cases", stage: 5, chapter: 0, title: "附錄：全書實戰案例與關鍵 Claude Code 提示詞", summary: "貫穿主角阿哲，從媒體 OPC 升級成 The Super One 的 12 章最佳實務案例，每章附可直接貼用的 Claude Code 提示詞。" },
 ];
 
