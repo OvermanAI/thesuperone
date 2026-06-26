@@ -64,7 +64,8 @@ export const CANON: Canon[] = [
   { slug: "ch11", stage: 4, chapter: 11, title: "超級競爭優勢：不可複製的護城河", summary: "一人勝百人；會自己加速、對手抄不走的護城河。" },
   { slug: "ch12", stage: 4, chapter: 12, title: "成為文化領袖：AI 時代的新世代領導者", summary: "不只是高收入，是一種新的活法。" },
   { slug: "boss-engineering", stage: 5, chapter: 0, title: "附錄：Boss Engineering 實戰手冊", summary: "別追會過時的 Prompt/Context/Harness/Loop Engineering——用最強 AI 去執行它們；你只專精唯一會增值的技能：當一流 AI 老闆。" },
-  { slug: "appendix-cases", stage: 5, chapter: 0, title: "附錄：全書實戰案例與關鍵 Claude Code 提示詞", summary: "貫穿主角阿哲，從媒體 OPC 升級成 The Super One 的 12 章最佳實務案例，每章附可直接貼用的 Claude Code 提示詞。" },
+  { slug: "appendix-cases", stage: 5, chapter: 0, title: "附錄：全書實戰案例與關鍵 Claude Code 提示詞", summary: "貫穿主角 Smart，從媒體 OPC 升級成 The Super One 的 12 章最佳實務案例，每章附可直接貼用的 Claude Code 提示詞。" },
+  { slug: "appendix-real-cases", stage: 5, chapter: 0, title: "附錄：真實案例 —— 打造一座量產 Agent 原生網站的 AI 工廠", summary: "從零組一座會 BUILD、會 SELL 的異質艦隊 AI 工廠：產品、開模、生產線、成本訂價、每日銷售，誠實標出已驗證 vs 假設。" },
   { slug: "bonus-wip", stage: 6, chapter: 0, title: "贈品一：WRITING IN PUBLIC 寫作法", summary: "本書獨創——把 Building in Public 用在寫書上：Claude Code + Obsidian + 電子書網站的一套 WIP 實戰寫作法。" },
   { slug: "bonus-prompts", stage: 6, chapter: 0, title: "贈品二：用 Claude Code 創作電子書的一流提示詞", summary: "本書用過、驗證過的 10 條提示詞，覆蓋搭站→定位→寫作→校準→上架，讓你用 Claude Code + WIP 寫自己的書。" },
 ];
