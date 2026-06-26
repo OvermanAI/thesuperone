@@ -44,6 +44,7 @@ export const STAGES: StageMeta[] = [
   { n: 3, theme: "主題三", title: "The Super Money（超級生意 · 形態）", blurb: "三位一體：品牌 × 媒體 × 電商" },
   { n: 4, theme: "主題三", title: "The Super Money（超級生意 · 本質）· The Super One", blurb: "為什麼超級 + 終局" },
   { n: 5, theme: "EXTRAS · 附錄", title: "深入手冊與實戰案例", blurb: "Boss Engineering 操作手冊、全書案例與 Claude Code 提示詞" },
+  { n: 6, theme: "🎁 BONUS · 讀者贈品", title: "創作你自己的電子書", blurb: "本書獨創的 WRITING IN PUBLIC 寫作法 + 用 Claude Code 創作電子書的一流提示詞" },
 ];
 
 type Canon = { slug: string; stage: number; chapter: number; title: string; summary: string };
@@ -64,6 +65,8 @@ export const CANON: Canon[] = [
   { slug: "ch12", stage: 4, chapter: 12, title: "成為文化領袖：AI 時代的新世代領導者", summary: "不只是高收入，是一種新的活法。" },
   { slug: "boss-engineering", stage: 5, chapter: 0, title: "附錄：Boss Engineering 實戰手冊", summary: "別追會過時的 Prompt/Context/Harness/Loop Engineering——用最強 AI 去執行它們；你只專精唯一會增值的技能：當一流 AI 老闆。" },
   { slug: "appendix-cases", stage: 5, chapter: 0, title: "附錄：全書實戰案例與關鍵 Claude Code 提示詞", summary: "貫穿主角阿哲，從媒體 OPC 升級成 The Super One 的 12 章最佳實務案例，每章附可直接貼用的 Claude Code 提示詞。" },
+  { slug: "bonus-wip", stage: 6, chapter: 0, title: "贈品一：WRITING IN PUBLIC 寫作法", summary: "本書獨創——把 Building in Public 用在寫書上：Claude Code + Obsidian + 電子書網站的一套 WIP 實戰寫作法。" },
+  { slug: "bonus-prompts", stage: 6, chapter: 0, title: "贈品二：用 Claude Code 創作電子書的一流提示詞", summary: "本書用過、驗證過的 10 條提示詞，覆蓋搭站→定位→寫作→校準→上架，讓你用 Claude Code + WIP 寫自己的書。" },
 ];
 
 const CONTENT_DIR = path.join(process.cwd(), "content", "book");

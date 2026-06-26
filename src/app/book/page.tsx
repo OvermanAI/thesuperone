@@ -60,7 +60,7 @@ export default function BookIndex() {
                     <div className="flex items-center justify-between gap-4 py-4">
                       <div className="min-w-0">
                         <div className="flex items-baseline gap-3">
-                          {c.stage !== 5 && (
+                          {c.stage < 5 && (
                             <span className="font-mono text-xs tabular-nums text-[var(--metal)]">
                               {String(c.chapter).padStart(2, "0")}
                             </span>
@@ -69,7 +69,7 @@ export default function BookIndex() {
                             {c.title}
                           </span>
                         </div>
-                        <p className={`mt-1 text-sm text-[var(--muted)] ${c.stage !== 5 ? "pl-8" : ""}`}>
+                        <p className={`mt-1 text-sm text-[var(--muted)] ${c.stage < 5 ? "pl-8" : ""}`}>
                           {c.summary}
                         </p>
                       </div>
